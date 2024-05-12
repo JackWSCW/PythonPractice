@@ -19,6 +19,8 @@ if answer == c or answer == "c".lower():
     score += 5
 elif answer == "":
     print("Not Sure?")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer != d and answer != "d":
+    print("That wasn't an option")
 else:
     print("You are wrong")
 # check the users answer and give them feedback
@@ -35,8 +37,10 @@ if answer == a or answer == "a".lower():
     score += 5
 elif answer == "":
     print("Not Sure?")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer != d and answer != "d":
+    print("That wasn't an option")
 else:
-    print("you are wrong")
+    print("You are wrong")
 # check the users answer and give them feedback
 print("The answer is the Whale Shark!")
 # end the quiz and thank them for playing
