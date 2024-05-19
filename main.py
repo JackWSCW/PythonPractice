@@ -1,7 +1,9 @@
 play = "yes"
 
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
-
+import random
+GOOD_COMMENTS = ["Way to go!", "Keep it up!", "Fantastic!"]
+BAD_COMMENTS = ["Keep Trying", "Maybe next time", "Don't give up"]
 # ask the user their name 
 name = input("What is your name?")
 
@@ -33,6 +35,7 @@ while play == "yes":
         if answer == c or answer == "c".lower():
             print("Correct!")
             score += 5
+            print(random.choice(GOOD_COMMENTS))
             break
         elif answer == "":
             print("Not Sure?")
@@ -40,6 +43,7 @@ while play == "yes":
             print("That wasn't an option")
         else:
             print("You are wrong")
+            print(random.choice(BAD_COMMENTS))
 
             question_attempts -= 1
         print("The answer is 3,500,000,000")
@@ -49,7 +53,7 @@ while play == "yes":
     # ask the user a question
     question_attempts = tries
     while question_attempts > 0:
-        question = "What is the worlds largest fish?"
+        question = "What is the worlds largest fish?"   
         a = "The Whale Shark"
         b = "The Blue Whale"
         c = "The Basking Shark"
@@ -57,6 +61,7 @@ while play == "yes":
         answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()        
         if answer == a or answer == "a".lower():
             print("Correct!")
+            print(random.choice(GOOD_COMMENTS))
             score += 5
             break
         elif answer == "":
@@ -65,7 +70,7 @@ while play == "yes":
             print("That wasn't an option")
         else:
             print("You are wrong")
-
+            print(random.choice(BAD_COMMENTS))
         question_attempts -= 1
     # check the users answer and give them feedback
     print("The answer is the Whale Shark!")
