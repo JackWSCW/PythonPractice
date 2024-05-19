@@ -1,10 +1,7 @@
 play = "yes"
 
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
-while play == "yes":
-    print("Hello")
-score = 0
-play = "yes"
+
 # ask the user their name 
 name = input("What is your name?")
 
@@ -15,7 +12,7 @@ print("This quiz is about fish.")
 # Check number of question attempts
 while True:
     try:   
-        tries = input("How mant attempts do you want at each question? 1-4")
+        tries = input("How mant attempts do you want for each question? 1-4")
         tries = int(tries) 
         break
     except:
@@ -23,7 +20,7 @@ while True:
 
 # Start the quiz
 while play == "yes":
-
+    score = 0
     question_attempts = tries
     while question_attempts > 0:
         # ask the user a question
@@ -73,8 +70,10 @@ while play == "yes":
     # check the users answer and give them feedback
     print("The answer is the Whale Shark!")
   
-# end the quiz and thank them for playing
-print("That is the end of the quiz {}. Thank you for playing! Your final score was {}".format(name, score))
+    # end the quiz and thank them for playing
+    print("That is the end of the quiz {}. Thank you for playing! Your final score was {}".format(name, score))
 
-# replay
-play = input("Do you want to play again?").lower()
+    # replay
+    play = input("Do you want to play again?").lower()
+
+print("Goodbye")
