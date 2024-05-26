@@ -5,11 +5,11 @@ QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
 GOOD_COMMENTS = ["Way to go!", "Keep it up!", "Fantastic!"]
 BAD_COMMENTS = ["Keep Trying", "Maybe next time", "Don't give up"]
 QUESTIONS = ["What is the best estimate for how many fish are in the whole ocean?",
-             "What is the name of the largest fish in the ocean?",
-             "What is the average lifespan of a shark?"]
+              "What is the name of the largest fish in the ocean?",
+               "What is the average lifespan of a shark?"]
 OPTIONS = [["4,200,000,000,000", "2,560,000,000", "3,500,000,000,000", "9,150,000,500,000"],
-           ["The whale shark", "The basking shark", "Tiger shark", "Great white shark",]
-           ["10-20 years", "20-30 years", "30-40 years", "40-30 years"]]
+           ["Whale shark", "Basking shark", "Tiger shark", "Great white shark",],
+           ["10 to 20 years", "20 to 30 years", "30 to 40 years", "40 to 50 years"]]
 SHORT_OPTIONS = ["a", "b", "c", "d"]
 ANSWERS = [3,1,2]
 # ask the user their name 
