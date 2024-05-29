@@ -1,5 +1,5 @@
 guesses = []
-TOP_SELLING_CARS_NZ_ANSWERS = ["Toyota RAV 4", "Mitsibishi Outlander", "Mitsibishi ASX", "Kia Seltos", "Suzuki Swift", "Ford Everest", "Kia Stonic", "Toyota Corolla Cross", "Mitisbishi Eclipse Cross", "MG ZS"]
+BEST_SELLING_CAR_BRANDS_ANSWERS = ["toyota", "volkswagen", "honda", "hyundai", "ford", "nissan", "chevrolet", "kia", "build Your Dream", "mercedes"]
 
 # ------ FUNCTIONS --------
 
@@ -10,7 +10,7 @@ def intro():
 
     # Greet the user and introduce the quiz
     print("Welcome to this quiz,", name)
-    print("This quiz is about the Top 10 best selling car models in New Zealand.")
+    print("This quiz is about the top 10 best selling car brands in the world.")
 
 # Asks the user for lives and confirms is valid
 def getLives():
@@ -41,10 +41,10 @@ score = 0
 
 # Begin quiz
 while lives > 0:
-    answer = input("Name one of the best selling car models in New Zealand:\n").lower()
+    answer = input("Name one of the best selling car brands in the world:\n").lower()
 
     # Checks if correct or wrong
-    if inList(answer, TOP_SELLING_CARS_NZ_ANSWERS):
+    if inList(answer, BEST_SELLING_CAR_BRANDS_ANSWERS):
         # Checks if already guessed or not
         if inList(answer, guesses):
             print("You've guessed that already")
@@ -52,11 +52,11 @@ while lives > 0:
             print("Correct")
             score += 5
             guesses.append(answer)
-            print("You have guessed {}. Your score is {}. You have {} chances remaining".format(len(guesses),score))
+            print("You have guessed {}. Your score is {}. You have {} chances remaining".format(len(guesses), score))
     else:
         print("Wrong")
         lives -= 1
-        print("You have guessed {}. Your score is {}. You have {} chances remaining".format(len(guesses),score))
+        print("You have guessed {}. Your score is {}. You have {} chances remaining".format(len(guesses), score))
 
 # End game
 print ("Game Over. Your final score was {}".format(score))
